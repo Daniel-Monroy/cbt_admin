@@ -1,0 +1,51 @@
+/* 
+    Document   : m260
+    Created on : 10/01/2014, 06:57:27 PM
+    Author     : KJOSUE
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body{
+    background-color: #F7F7F6;
+}
+
+/* login */
+.login{
+    background-color: #fff;
+    padding: 1.5em;
+    margin: 65px -20px; 
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+.login input, .login button{
+    margin-top: .5em;
+}
+
+.login p{
+    margin-top: 1em;
+}
+
+/* generales */
+@font-face { 
+  font-family: Yanone Kaffeesatz; 
+    src: url('../../fonts/YanoneKaffeesatz-Regular-webfont.eot'); 
+    src: local("Yanone Kaffeesatz"), url('../../fonts/YanoneKaffeesatz-Regular-webfont.ttf'); 
+    src: local("Yanone Kaffeesatz"), url('../../fonts/YanoneKaffeesatz-Regular-webfont.woff'); 
+} 
+
+@font-face { 
+  font-family: News Cycle; 
+    src: url('../../fonts/NewsCycle-Regular-webfont.eot'); 
+    src: local("News Cycle"), url('../../fonts/NewsCycle-Regular-webfont.ttf'); 
+    src: local("News Cycle"), url('../../fonts/NewsCycle-Regular-webfont.woff'); 
+}
+
+.pemsa_font {
+    font-family: "News Cycle", arial;
+}
