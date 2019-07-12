@@ -135,6 +135,7 @@ ALTER TABLE `ia_profiles` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCR
 
 # = IA REG_INVITED
 # =============================
+drop table if exists ia_reg_invited;
 CREATE TABLE `ia_reg_invited` (
   `record_id` tinyint(1) NOT NULL,
   `invited_id` tinyint(1) NOT NULL
