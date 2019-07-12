@@ -10,6 +10,10 @@ function receipts(content){
         processData: false,
         dataType: 'json',
         success: function(response){
+            if(!response){
+                swal({text: "Código no registrado en la base de datos", type: "error", timer:1200});
+                return;
+            }
             $(".student_name").html(response['student_name']);
             var list = '';
             JSON.parse(response["invited_list"]).forEach(functionForEach);
