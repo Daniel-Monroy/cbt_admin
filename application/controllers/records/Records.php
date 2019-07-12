@@ -22,6 +22,35 @@ class Records extends MY_Controller {
 		$this->load->view('records/index', $this->data);
 	}
 
+	public function receipts(){
+		$this->data['extraFooterPluginsContent'] = get_assets('plugins/instascan.min.js');
+		$this->data['extraFooterContent']  = get_assets('records/receipts.js');
+		$this->data['extraFooterContent'] .= get_assets('records/qr_code.js');
+		$this->load->view('records/receipts', $this->data);
+	}
+
+	function registred_invited(){
+
+		#VERIFICAR QUE NO HAYA SIDO REGISTRADO EL INVITADO
+		$info_reg = $this->records_model->get_registred_invited($_POST['record_id'], $_POST['invited_id']);
+		
+		if($info_reg->num_rows() > 0){
+			echo json_encode(['type' => 'error', 'text'=> 'Ya ha sido registrado']);
+			return;
+		}
+		
+		$max_id = $this->records_model->registred_invited($_POST);
+		if ($max_id) {
+			echo json_encode(['type' => 'success', 'text'=> 'Bienvenido']);
+		}
+	}
+
+	public function get_student_invited(){
+		$code = id_decode($this->input->post('code'));
+		$invited_list = $this->records_model->get_for_code('10106')->row();
+		echo json_encode($invited_list);
+	}
+
 	public function del_conf() {
 		$record_id   = $this->input->post('record_id');
 		$record_info = $this->records_model->get_all("record_id", $record_id);

@@ -34,7 +34,7 @@ function get_files_f($file){
 }
 
 function get_anonymous_img(){
-  return base_url().'assets/img/anonymous.jpg';
+  return base_url().'assets/img/template/anonymous.png';
 }
 
 if(!function_exists('get_message')){
