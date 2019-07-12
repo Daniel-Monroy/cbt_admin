@@ -132,4 +132,16 @@ CREATE TABLE `ia_profiles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 ALTER TABLE `ia_profiles` ADD PRIMARY KEY (`id`);
 ALTER TABLE `ia_profiles` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+# = IA REG_INVITED
+# =============================
+drop table if exists ia_reg_invited;
+CREATE TABLE `ia_reg_invited` (
+  `record_id` tinyint(1) NOT NULL,
+  `invited_id` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+ALTER TABLE `ia_reg_invited` ADD PRIMARY KEY (`record_id`,`invited_id`);
+
 COMMIT;
+
+
