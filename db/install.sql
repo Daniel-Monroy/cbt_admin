@@ -138,10 +138,10 @@ ALTER TABLE `ia_profiles` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCR
 drop table if exists ia_reg_invited;
 CREATE TABLE `ia_reg_invited` (
   `record_id` tinyint(1) NOT NULL,
-  `invited_id` tinyint(1) NOT NULL
+  `invited_id` tinyint(1) NOT NULL,
+  `user_id` tinyint(1) NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-ALTER TABLE `ia_reg_invited` ADD PRIMARY KEY (`record_id`,`invited_id`);
-
 COMMIT;
 
 

@@ -13,16 +13,34 @@
 
    		<div class="row">
    				
-   			<div class="col-md-6 col-xs-12">
+   			<div class="col-md-5 col-xs-12">
 				<div class="box">
 		   			<div class="box-header with-border box-danger">
+		   				
 		   				<h1 class="text-center"> Bienvenidos </h1>
+
 						<center>
 							<video id="preview" width="45%" heigth="100px"></video>
 						</center>
-						<span class="text-center">
-							<h5 class="text-success"> Registra el código </h5>	
-						</span>
+						
+
+						<div class="form-group">
+							<label for=""> Ingresa el número de control </label>
+							<div class="input-group">
+							
+								<span class="input-group-addon">
+									<i class="fa fa-key"></i>
+								</span>
+							
+								<input type="text" class="form-control student_account" placeholder="Ingresa el número de control">
+							
+								<div class="input-group-btn">
+									<button class="btn btn-default btn_student_account" type="button">
+										<i class="fa fa-search"></i> Leer
+									</button>
+								</div>
+							</div>
+						</div>
 						
 						<div class="clearfix">
 							<?php echo anchor('records/records/receipts', '<i class="glyphicon glyphicon-saved"></i> Limpiar registro', 'class="btn btn-warning btn-sm pull-right"'); ?>
@@ -31,7 +49,7 @@
 		   		</div>	
 			</div>
 
-			<div class="col-md-6 col-xs-12">
+			<div class="col-md-7 col-xs-12">
 				<div class="box">
 					<div class="box-header">
 						<h1 class="text-center"> Graduación CBT-2019 </h1>
