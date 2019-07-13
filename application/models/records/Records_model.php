@@ -38,6 +38,7 @@ class Records_model extends CI_Model {
     }
 
     function registred_invited($data = []){
+        $data['user_id'] = $this->session->user_id;
         $this->db->insert($this->table_registred, $data);
         return TRUE;
     }
