@@ -14,7 +14,7 @@ function receipts(content){
                 swal({text: "Código no registrado en la base de datos", type: "error", timer:1200});
                 return;
             }
-            $(".student_name").html(response['student_name']);
+            $(".student_name").html("<span>  Alumno: <br> </span> <strong> "+response['student_name']+" </strong>");
             var list = '';
             JSON.parse(response["invited_list"]).forEach(functionForEach);
             function functionForEach(item, index){
@@ -38,9 +38,7 @@ $(document).on('click', '.btn_student_account', function(){
         $('.student_account').parent().addClass("has-error");
         return;
     }
-    $('.btn_student_account').removeClass('btn_student_account');
     $('.inp_student_account').parent().removeClass("has-error");
-
     var data = new FormData();
     data.append('student_account', $('.student_account').val());
     $.ajax({
@@ -56,7 +54,8 @@ $(document).on('click', '.btn_student_account', function(){
                 swal({text: "Número de control no encontrado, verifica los datos ingresados", type: "error", timer:1500});
                 return;
             }
-            $(".student_name").html(response['student_name']);
+            $('.btn_student_account').removeClass('btn_student_account');
+            $(".student_name").html("<span>  Alumno: <br> </span> <strong> "+response['student_name']+" </strong>");
             var list = '';
             JSON.parse(response["invited_list"]).forEach(functionForEach);
             function functionForEach(item, index){
