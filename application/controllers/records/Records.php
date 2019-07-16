@@ -46,6 +46,16 @@ class Records extends MY_Controller {
 	public function get_code_for_account_student(){
 		if($this->records_model->get_all('student_account', $_POST['student_account'])->num_rows() > 0){
 			$invited_list = $this->records_model->get_all('student_account', $_POST['student_account'])->row();
+			$invited = [];
+			foreach (json_decode($invited_list->invited_list, true) as $key => $value) {
+				#VERIFICAR SI YA HA REGISTRADO INVITADOS EL ALUMNO.
+				if($this->records_model->get_registred_invited($invited_list->record_id, $value['invited_id'])->num_rows() > 0){
+					array_push($invited, ['invited_id' => $value['invited_id'], 'student_invited' => $value['student_invited'], 'status' => '1']);
+				} else{
+					array_push($invited, ['invited_id' => $value['invited_id'], 'student_invited' => $value['student_invited'], 'status' => '0']);
+				}
+			}
+			$invited_list->invited_list = json_encode($invited);
 			echo json_encode($invited_list);
 			return;
 		}

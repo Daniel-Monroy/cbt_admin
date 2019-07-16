@@ -56,6 +56,9 @@
 					</div>
 
 					<div class="box-body no-padding">
+						<center>
+							<h2 class="student_name"> <span>  Alumno: <br> </span> <strong> Daniel Monroy Domínguez </strong>  </h2>
+						</center>
 		              	<ul class="users-list clearfix">
 			                <li style="width: 33.3%!important">
 			                  <img src="<?php echo get_anonymous_img()?>" style="max-width: 100%!important" alt="User Image">
