@@ -42,7 +42,8 @@
                			</td>
                			<td>
                				Código: <strong> <?php echo $records->code;?> </strong> <br>
-               				<strong><?php echo $records->student_name; ?></strong> 
+               				<strong><?php echo $records->student_name; ?></strong> <br>
+                           Número de control:  <strong> <?php echo $records->student_account;?> </strong>
                				<br>
                				<?php echo $this->plans_model->get_all("plan_id", $records->plan_id)->row()->description;?> - 
                				<?php echo $this->groups_model->get_all("group_id", $records->group_id)->row()->name;?>
