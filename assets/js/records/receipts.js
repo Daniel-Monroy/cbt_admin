@@ -8,23 +8,31 @@ function receipts(content){
         cache: false,
         contentType: false,
         processData: false,
-        //dataType: 'json',
+        dataType: 'json',
         success: function(response){
-            console.log("response", response);
             if(!response){
                 swal({text: "Código no registrado en la base de datos", type: "error", timer:1200});
                 return;
             }
+            $('.btn_student_account').removeClass('btn_student_account');
             $(".student_name").html("<span>  Alumno: <br> </span> <strong> "+response['student_name']+" </strong>");
+            
             var list = '';
             JSON.parse(response["invited_list"]).forEach(functionForEach);
             function functionForEach(item, index){
+                 if(item.status == 0){
+                   var btn_registred_invited = '<button class="btn btn-primary btn-xs btn_registred_invited" record_id="'+response.record_id+'" invited_id="'+item.invited_id+'"> <i class="glyphicon glyphicon-saved"></i> Registrar Entrada </button>';
+                   var img = '<img src="'+base_url+'assets/img/template/anonymous.png" class="invited_img_'+item.invited_id+'" style="max-width: 100%!important">';
+                } else{
+                    var btn_registred_invited = '<button class="btn btn-success btn-xs"><i class="fa fa-check"></i> Entrada registrada </button>'; 
+                    var img = '<img src="'+base_url+'assets/img/template/registred.png" style="max-width: 70%!important">'; 
+                }  
                 list = list + '<li style="width: 33.3%!important">'+
-                  '<img src="'+base_url+'assets/img/template/anonymous.png" style="max-width: 100%!important" alt="User Image">'+
-                  '<a class="users-list-name" href="#"> Invitado'+
+                 img+
+                 '<a class="users-list-name" href="#"> Invitado'+
                    ' <h4> '+item.student_invited+' </h4> '+          
-                  '</a>'+
-                  '<button class="btn btn-primary btn-xs btn_registred_invited" record_id="'+response.record_id+'" invited_id="'+item.invited_id+'"> <i class="glyphicon glyphicon-saved"></i> Registrar Entrada </button>'+
+                  '</a>'+ 
+                  btn_registred_invited +
                 '</li>';
             }
             $(".users-list").html(list);
