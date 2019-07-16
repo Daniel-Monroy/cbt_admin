@@ -23,8 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url']   = 'https://dafsystems.xyz/cbt_admin/';
-$config['base_url_f'] = 'https://dafsystems.xyz/cbt/';
+$config['base_url']   = 'https://dafsystems.xyz/cbt_admin_developers/';
+$config['base_url_f'] = 'https://dafsystems.xyz/cbt_developers/';
 
 /*
 |--------------------------------------------------------------------------
