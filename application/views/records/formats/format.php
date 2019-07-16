@@ -263,244 +263,125 @@ $base_prefix = base_url();
         <tr>
             
             <td width="20%" align="left" >
-                <img src="<?php echo $base_prefix; ?>assets/img/template/escudo-edomex.png" id="logo" alt="Tesvg"/>
+                <img src="<?php echo $base_prefix; ?>assets/img/template/logo-cbt.png" id="logo" alt="Tesvg"/>
             </td>
             
             <td  width="50%" align="center" style="vertical-align:middle;">
                 <p style=" text-align:center; border:0;font-weight:normal; color: #296331;">
-                    <b style="font-size: 25px; font-style: italic;">14° IdeaTec 2019 </b><br />
+                    <b style="font-size: 25px; font-style: italic;">Generación | 2019 </b><br />
                     <b style="color:red; font-size:16px; font-style: italic;">
-                        "Una persona que nunca cometió un error, nunca intentó algo nuevo"  <br> <small> -  Albert Einstein, físico. </small>
+                        Reporte de asistencia  <br>
                     </b>
                 </p>
             </td>
              <td width="20%" align="right" >
-                <img src="<?php echo $base_prefix; ?>assets/img/template/logo_report.png" id="logo" alt="Tesvg" />
+                <img src="<?php echo $base_prefix; ?>assets/img/template/sirma-sep-prepaenlineasep.png" id="logo" alt="Tesvg" />
             </td>
         </tr>
     </table>
  </div><!--end header-->
- <div >
-   <table width="100%">
-    <tr>
-        <td width="100%" colspan="2" align="center" >
-            <p style="font-size:14px; text-align:center; border:0;font-weight:normal; color:black; padding: 2px ;">
-               <b>CEDULA DE REGISTRO PARA LOS PROYECTOS DE IDEATEC 2019</b> <br/>
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td width="90%" align="center" >
-            <p style="font-size:12px; text-align:right; border:0;font-weight:normal; color:black; padding: 2px ;">
-               <b>Folio</b> 
-            </p>
-        </td>
-        <td  width="10%" align="center" style=" border: 1px solid black; ">
-            <p style="font-size:12px; text-align:center; border:0;font-weight:normal; color:black; padding: 2px ;">
-               <b> <?= $record_info->code ?> </b>
-            </p>
-        </td>        
-    </tr>
-    </table>
-  </div>
 
     
 <div> 
-    <table style="margin-top: 20px;">
-     <tr style="">
-        <td width="15%" align="left" >
-            <p style="font-size:12px; text-align:center; border:0;font-weight:normal; color:black; padding: 2px ;">
-               <b>Institución:</b> 
-            </p>
-        </td>
-        <td width="80%" align="center" >
-            <p style="font-size:12px; text-align:left; border:0;font-weight:normal; color: black; padding: 2px;  border: 1px solid black; margin-top: 10px; height: 22px">
-               <b> <?= $institute->description; ?> </b>
-            </p>
-        </td>  
-    </tr>
-     <tr>
-        <td width="15%" align="left" >
-            <p style="font-size:12px; text-align:center; border:0;font-weight:normal; color:black; padding: 2px ;">
-               <b>Carrera (s):</b> 
-            </p>
-        </td>
-        <td width="80%" align="center" >
-            <p style="font-size:12px; text-align:left; border:0; font-weight:normal; color:black; padding: 2px; border: 1px solid black; margin-top: 10px; height: 22px">
-               <b> <?= $plan->description; ?> </b>
-            </p>
-        </td>  
-    </tr>
-     <tr >
-        <td width="15%" align="left" >
-            <p style="font-size:12px; text-align:center; border:0;font-weight:normal; color:black; padding: 2px ;">
-               <b>Proyecto:</b> 
-            </p>
-        </td>
-        <td width="80%" align="center" >
-            <p style="font-size:12px; text-align:left; border:0;font-weight:normal; color:black; padding: 2px; border: 1px solid black; margin-top: 10px; height: 22px">
-              <b> <?= $record_info->proyect_name; ?> </b>
-            </p>
-        </td>  
-    </tr>
-     <tr >
-        <td width="15%" align="left" >
-            <p style="font-size:12px; text-align:center; border:0;font-weight:normal; color:black; padding: 2px ;">
-               <b>Categoría:</b> 
-            </p>
-        </td>
-        <td width="80%" align="center" >
-            <p style="font-size:12px; text-align:left; border:0;font-weight:normal; color:black; padding: 2px; border: 1px solid black; margin-top: 10px; height: 22px">
-               <b> <?= $proyect_category->description; ?> </b>
-            </p>
-        </td>  
-    </tr>
-    <tr>
-     <td colspan="2" width="80%" align="center" >
-            <p style="font-size:12px; text-align:left; border:0;font-weight:normal; color:black; padding: 2px; margin: 10px">
-               <b>Emprendedores</b>
-            </p>
-        </td> 
-    </tr>
-    </table>
-    
+
     <table width="100%">
        
         <thead style="background: #6fba1d">
             <tr>
-            <th width="25%" style="border: 1px solid #000" align="center">Nombre</th>
-            <th width="30%" style="border: 1px solid #000" align="center">Direción</th>
-            <th width="10%" style="border: 1px solid #000" align="center">Teléfono</th>
-            <th width="20%" style="border: 1px solid #000" align="center">e-mail</th>
-            <th width="15%"  style="border: 1px solid #000" align="center">Semestre</th>
+            <th width="5%" style="border: 1px solid #000" align="center">No.</th>
+            <th width="35%" style="border: 1px solid #000" align="center">Nombre</th>
+            <th width="30%" style="border: 1px solid #000" align="center">invitados</th>
+            <th width="20%" style="border: 1px solid #000" align="center">No. de asistencia</th>
             </tr>
         </thead>
         
         <tbody style="margin-bottom: 15px; text-align: center; font-size: 11px">
 
-         <?php 
 
-            $members = json_decode($record_info->members_list, true);  
-            
-            foreach ($members as $key => $member):  ?>
-
-           <tr>
-                <td style="border: 1px solid #000; padding: 20px" >
-                    <?= $member["member_name"]; ?> <br>
-                    <?=
-                        ($member["boss_member"] == 1)?('Lider de proyecto'):(''); 
-                    ?>
-                </td>
-                <td style="border: 1px solid #000"> <?= $member["member_address"];?> </td>
-                <td style="border: 1px solid #000"> <?= $member["member_phone"]; ?> </td>
-                <td style="border: 1px solid #000"> <?= $member["member_email"]; ?> </td>
-                <td style="border: 1px solid #000">  <?= $this->grades_model->get_all_grades("id", $member["member_grade"])->row()->description; ?> </td>
-            </tr> 
-           
-         <?php endforeach; ?> 
 
          <?php
 
-         for ($i=count($members)+1; $i <= 5 ; $i++):?>
-         
-           <tr>
-                <td style="border: 1px solid #000; padding: 20px" ></td>
-                <td style="border: 1px solid #000"></td>
-                <td style="border: 1px solid #000"></td>
-                <td style="border: 1px solid #000"></td>
-                <td style="border: 1px solid #000"></td>
+
+        $cont =  1;
+        $total_invitad = 0;
+        $total_invitad_asis = 0;
+
+        foreach ($alumnos->result() as $key => $value):?>
+
+           
+      <?php  $cont_invitados = 0;  ?>
+            <tr>
+            
+                <td style="border: 1px solid #000; padding: 5px; font-size: 8px;" ><?php echo $cont ?></td>
+                <td style="border: 1px solid #000; font-size: 10px; font-style: normal; text-transform:uppercase;  "><?php echo $value->student_name ?></td>
+
+               <td style="border: 1px solid #000">
+                <?php 
+                 $invited = json_decode($value->invited_list, true);
+
+                foreach ($invited as $key => $invitados):?>
+                
+
+                <?php $statu = false;?>
+
+                   <?php foreach ($asistencia->result() as $key => $asistir): ?>
+
+
+                    <?php if(($value->record_id == $asistir->record_id)&& ($invitados['invited_id'] == $asistir->invited_id)): ?>
+
+                    <?php
+
+                     $statu = true;
+                     $cont_invitados++;
+
+
+                     ?>
+
+                    <?php endif; ?>
+
+                       
+                   <?php endforeach;?>
+
+                   <?php if($statu == true):?>
+                    <p style="border: 0px; text-align: left; color: black; font-size: 10px; text-decoration-line: none;  text-transform: uppercase;">
+                       <?php echo $invitados['invited_id'].'.- '.$invitados['student_invited'] ?>
+                   </p>
+
+                    <?php else: ?>
+                     <p style="border: 0px; text-align: left; color: red; font-size: 10px; text-transform:uppercase;">
+                       <?php echo $invitados['invited_id'].'.- '.$invitados['student_invited'] ?>
+                   </p>
+
+                <?php endif; ?>
+                    
+                <?php endforeach; ?>
+
+                </td>
+
+                <td style="border: 1px solid #000;">
+
+                    <p style="font-size: 9px; padding: 0px; margin: 0px;"><?php echo $cont_invitados. ' de '.$value->total_guest ?></p>
+                </td>
             </tr> 
-       
-        <?php endfor; ?>
+
+            <?php $cont++; 
+
+             $total_invitad = $total_invitad + $value->total_guest;
+             $total_invitad_asis = $total_invitad_asis + $cont_invitados;
+            ?>
+         <?php endforeach; ?>
+
+         <tr>
+             <td style="border: 1px solid #000"></td>
+             <td style="border: 1px solid #000; font-size: 12px; padding: 5px;">Total</td>
+             <td style="border: 1px solid #000; font-size: 12px; "><?php echo $total_invitad ?></td>
+             <td style="border: 1px solid #000; font-size: 12px;" ><?php echo $total_invitad_asis ?></td>
+         </tr>
         
         </tbody>
 
     </table>    
 
-    <table align="center" width="100%">
-        
-        <tbody>
-
-                <tr>
-                    <td  align="left">
-                        <p style="font-size:12px; text-align:left; border:0;font-weight:normal; color:black; padding: 2px;  margin-top: 20px">
-                           <b>Asesor </b><br />
-                           <b>académico</b>
-                        </p>
-                    </td>
-                    <td   width="80%" align="center">
-                        <p style="font-size:12px; text-align:left; border:0;font-weight:normal; color:black; height: 30px;  border: 1px solid black; margin-top: 20px">
-                           <b style="margin-left: 10px"> <?php echo $record_info->academic_tutor ?> </b>
-                        </p>
-                    </td>  
-                </tr>
-
-                <tr>
-                    <td width="15%" align="left">
-                        <p style="font-size:12px; text-align:left; border:0;font-weight:normal; color:black; padding: 2px;  margin-top: 20px">
-                           <b>Asesor </b><br />
-                           <b>empresarial</b>
-                        </p>
-                    </td>
-                    <td width="80%" align="center">
-                        <p style="font-size:12px; text-align:left; border:0;font-weight:normal; color:black; height: 30px;  border: 1px solid black; margin-top: 20px">
-                           <b style="margin-left: 10px"> <?php echo $record_info->business_tutor ?> </b>
-                        </p>
-                    </td>  
-                </tr> 
-
-                <tr>
-                    <td width="100%" colspan="2" align="left">
-                        <p style="font-size:12px; text-align:center; border:0;font-weight:normal; color:black; padding: 2px ; margin-top: 20px">
-                           <b>Descripción del proyecto</b> 
-                        </p>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td width="100%" colspan="2" align="center">
-                        <p style="font-size:12px; text-align:left; border:0;font-weight:normal; color:black; border: 1px solid black; height: 70px">
-                          
-                            <?php echo $record_info->proyect_description ?>
-                          
-                        </p>
-                    </td>  
-                </tr>
-             
-        </tbody>
-
-    </table>
-
-    <table align="center" width="100%">
-        <tr>
-            <td width="100%" align="center">
-                <p style="font-size:12px; text-align:center; border:0;font-weight:normal; color:black; margin-top: 20px; margin-bottom: -15px">
-                    <?php  $members = json_decode($record_info->members_list, true);  
-                    $totals_members = count($members);
-                    foreach ($members as $key => $member): ?>
-                        <?php echo ($member["boss_member"] == 1)?($member["member_name"]):(''); ?>
-                    <?php endforeach; ?> 
-                </p>
-            </td> 
-        </tr>
-
-        <tr>
-            <td width="100%" align="center" style="vertical-align: bottom;">
-                <p style="font-size:12px; text-align:center; border:0; font-weight:normal; color:black; margin-top: 10px; ">  
-                   ________________________________ <br/>
-                   Nombre y firma del representante.</b>
-                </p>
-            </td> 
-        </tr>
-
-        <tr>
-            <td width="100%" align="center">
-                <p style="font-size:12px; text-align:left; border:0;font-weight:normal; color:black; margin-top: 10px; ">
-                   Anexar documento que describa las características principales del proyecto.</b>
-                </p>
-            </td> 
-        </tr>
-    </table>
 </div>
 
 </div>
