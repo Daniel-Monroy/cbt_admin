@@ -67,7 +67,18 @@ class Records extends MY_Controller {
 	public function get_student_invited(){
 		$code = id_decode($this->input->post('code'));
 		$invited_list = $this->records_model->get_for_code($code)->row();
+		$invited = [];
+		foreach (json_decode($invited_list->invited_list, true) as $key => $value) {
+				#VERIFICAR SI YA HA REGISTRADO INVITADOS EL ALUMNO.
+				if($this->records_model->get_registred_invited($invited_list->record_id, $value['invited_id'])->num_rows() > 0){
+					array_push($invited, ['invited_id' => $value['invited_id'], 'student_invited' => $value['student_invited'], 'status' => '1']);
+				} else{
+					array_push($invited, ['invited_id' => $value['invited_id'], 'student_invited' => $value['student_invited'], 'status' => '0']);
+				}
+		}
+		$invited_list->invited_list = json_encode($invited);
 		echo json_encode($invited_list);
+		return;
 	}
 
 	public function del_conf() {
@@ -75,17 +86,16 @@ class Records extends MY_Controller {
 		$record_info = $this->records_model->get_all("record_id", $record_id);
 		$this->records_model->update($record_id, ['status'=>ERASED]);
 		redirect('records/records');
-   	}
+  }
 
-   	public function  pdf_cbt($oformat = P ){
+   public function  pdf_cbt($oformat = P ){
    		$this->load->helper('export');
 
         $data['oformat'] = $oformat;
    		$data['alumnos'] = $this->records_model->get_all(); 
 
    		$data['asistencia'] = $this->reg_invited_model->get_invited();
-/*
-   		$this->load->view('records/formats/format', $data);*/
+    /*$this->load->view('records/formats/format', $data);*/
 
    		if($oformat =='P'){
 			$html = $this->load->view('records/formats/format.php', $data, TRUE);
@@ -98,5 +108,4 @@ class Records extends MY_Controller {
 
    	}
 }
-
 /* End of file Records.php */
