@@ -72,8 +72,8 @@
          <div class="dropdown" style="display: inline-block; margin-left:5px">
             <a class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown"><span > <i class="fa fa-download"></i> Todos los Registros </span></a>
             <ul class="dropdown-menu">
-               <li><?php echo anchor('reg/users/pdf_allusers/S',' <span class="fa fa-desktop"></span>Pantalla'); ?></li>
-               <li><?php echo anchor('reg/users/pdf_allusers/P',' <span class="fa fa-file-pdf-o"></span> PDF'); ?></li>
+               <li><?php echo anchor('records/records/pdf_cbt/S',' <span class="fa fa-desktop"></span>Pantalla'); ?></li>
+               <li><?php echo anchor('records/records/pdf_cbt/P',' <span class="fa fa-file-pdf-o"></span> PDF'); ?></li>
             </ul>
          </div>
       </div>
