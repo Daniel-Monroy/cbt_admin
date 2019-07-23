@@ -86,17 +86,16 @@ class Records extends MY_Controller {
 		$record_info = $this->records_model->get_all("record_id", $record_id);
 		$this->records_model->update($record_id, ['status'=>ERASED]);
 		redirect('records/records');
-   	}
+  }
 
-   	public function  pdf_cbt($oformat = P ){
+   public function  pdf_cbt($oformat = P ){
    		$this->load->helper('export');
 
         $data['oformat'] = $oformat;
    		$data['alumnos'] = $this->records_model->get_all(); 
 
    		$data['asistencia'] = $this->reg_invited_model->get_invited();
-/*
-   		$this->load->view('records/formats/format', $data);*/
+    /*$this->load->view('records/formats/format', $data);*/
 
    		if($oformat =='P'){
 			$html = $this->load->view('records/formats/format.php', $data, TRUE);
