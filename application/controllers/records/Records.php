@@ -12,6 +12,7 @@ class Records extends MY_Controller {
 		$this->load->model('plans/plans_model');
 		$this->load->model('groups/groups_model');
 		$this->load->model('reg/settings_model');
+		$this->load->model('reg/reg_invited_model');
 		$this->load->model('reg/users_model');
 		$this->data = [
 			'extraFooterContent' => get_assets('records/records.js') 
@@ -87,5 +88,4 @@ class Records extends MY_Controller {
 		redirect('records/records');
    	}
 }
-
 /* End of file Records.php */
